@@ -38,9 +38,9 @@ async def _(event):
                "**Choose one of the following reasons why you are here:**\n\n"
                "`1`. To chat with my master\n"
                "`2`. To spam my master's inbox.\n"
-               "`3`. To send nudes.\n"
-               "`4`. To enquire something\n"
-               "`5`. To request something\n")
+         
+               "`3`. To enquire something\n"
+               "`4`. To request something\n")
          ONE = ("__Okay. Your request has been registered. Do not spam my master's inbox.You can expect a reply within 24 light years. He is a busy man, unlike you probably.__\n\n"
                 "**⚠️ You will be blocked and reported if you spam nibba. ⚠️**\n\n"
                 "__Use__ `/start` __to go back to the main menu.__")
@@ -108,27 +108,19 @@ async def _(event):
                          await borg.send_message(chat, TWO)
                          await asyncio.sleep(3)
                          await event.client(functions.contacts.BlockRequest(chat_id))
-             elif x == "3":
-                 await borg.send_message(chat, "`Please decide a gender for yourself before sending your nudes here,\n not that i'm judging if you're a helicopter or a banana but yeah, If you are anything else than a female Homo-Sapien,\n Do not send more messages and let my master see for himself if he wants to talk with you.`")
-                 response = await conv.get_response(chat)
-                 if not response.text == "/start":
-                     await borg.send_message(chat, LWARN)
-                     response = await conv.get_response(chat)
-                     await event.delete()
-                     await response.delete()
-                     response = await conv.get_response(chat)
-                     if not response.text == "/start":
-                         await borg.send_message(chat, TWO)
-                         await asyncio.sleep(3)
-                         await event.client(functions.contacts.BlockRequest(chat_id))
-             else:
-                 await borg.send_message(chat, "__You have entered an invalid command. Please send__ `/start` __again or do not send another message if you do not wish to be blocked and reported.__")
-                 response = await conv.get_response(chat)
-                 if not response.text.startswith("/start"):
-                     await borg.send_message(chat, TWO)
-                     await asyncio.sleep(3)
-                     await event.client(functions.contacts.BlockRequest(chat_id))
-         elif y == "4":
+             
+        
+
+
+
+
+
+
+
+
+
+
+         elif y == "3":
              await borg.send_message(chat, FOUR)
              response = await conv.get_response(chat)
              await event.delete()
@@ -141,7 +133,7 @@ async def _(event):
                      await borg.send_message(chat, TWO)
                      await asyncio.sleep(3)
                      await event.client(functions.contacts.BlockRequest(chat_id))
-         elif y == "5":
+         elif y == "4":
              await borg.send_message(chat,FIVE)
              response = await conv.get_response(chat)
              if not response.text == "/start":
